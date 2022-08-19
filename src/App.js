@@ -11,7 +11,6 @@ import SearchBar from './components/SearchBar/SearchBar';
 function App() {
   
   const [beers, setBeers] = useState([]);
-  const [filteredData, setFilteredData]=useState(beers)
 
 
   //fetch api data
@@ -22,25 +21,18 @@ function App() {
     })
     .then(data => {
       setBeers(data)
-      setFilteredData(data)
     })
   }
   useEffect(() => {
     getBeers()
   }, []);
-
-  const filteredBeers = beers.filter(beer => beer.abv);
  
  
 
   return (
     <div>
       <Nav />
-      <SearchBar />
-      <div>
-      {beers &&<BeersContainer beers={beers}/>}
-      </div>
-      <BeerButton onClick={InfoCard}/>
+      {beers &&<ExploreBeers beers={beers}/>}
     </div>
   );
 }
@@ -56,4 +48,10 @@ export default App;
       return data.name.search(value) != 1;
     });
     setFilteredData(result);
-  }*/
+      const highestABV = beers.filter(beer => beer.abv).sort((a, b) => b.abv - a.abv);
+      
+  const [filteredData, setFilteredData]=useState(beers)
+  
+   <div>
+      {beers &&<BeersContainer beers={beers}/>}
+      </div>*/

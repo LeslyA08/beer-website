@@ -1,19 +1,19 @@
 import {useState} from 'react';
-import BeerCard from "../../components/BeerCard/BeerCard"
 import SearchBar from "../../components/SearchBar/SearchBar"
+import BeerContainer from "../../components/BeersContainer/BeersContainer"
 
 const ExploreBeers = (props) => {
     const {beers} = props;
-    const [searchTerm, setSearchTerm] = useState("")
+    const [searchTerm, setSearchTerm] = useState("");
 
     const handleInput = (event) => {
         const cleanInput = event.target.value.toLowerCase();
         setSearchTerm(cleanInput);
     };
     const filteredBeers = beers.filter((beer) => {
-        const beersTitleLower = beer.name.toLowerCare();
+        const beersTitleLower = beer.name.toLowerCase();
 
-        return beersTitleLower.includes(searchTerm)
+        return beersTitleLower.includes(searchTerm) && beer.name;
     })
 
     return (
@@ -21,9 +21,9 @@ const ExploreBeers = (props) => {
         <SearchBar
         label={"Beers"}
         searchTerm={searchTerm}
-        handleInpute={handleInput}
+        handleInput={handleInput}
         />
-        <BeerCard beers={filteredBeers}/>
+        <BeerContainer beers={filteredBeers}/>
         </>
     )
 }
