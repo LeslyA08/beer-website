@@ -1,17 +1,18 @@
 import BeerCard from "../BeerCard/BeerCard";
 import "./BeersContainer.scss";
 
-const BeersContainer = ({beers}) => {
+const BeersContainer = (props) => {
     return (
         <div>
-            {beers.map((beer) =>(
-            <BeerCard
+            {props.beers.map((beer) => {
+            return <BeerCard
             name={beer.name} 
             image_url={beer.image_url}
             abv= {beer.abv}
             />
-            ))}
+})}         
         </div>
+        
     )
 }
 

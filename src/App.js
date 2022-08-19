@@ -1,48 +1,42 @@
-import './App.css';
 import {useEffect, useState} from 'react';
+import './App.css';
 import Nav from "/home/lesly/nology/beer-website/src/components/Nav/Nav";
-import BeerCard from "./components/BeerCard/BeerCard";
 import BeersContainer from "./components/BeersContainer/BeersContainer";
-import beers from "./data/beers"
+import InfoCard from "./components/InfoCard/InfoCard";
+import BeerButton from "./components/BeerButton/BeerButton"
+
 
 
 function App() {
-  const mappedBeers = beers.map(beer => {
-    return <BeerCard beer = {beer} />
-  })
+  
+  const [beers, setBeers] = useState([]);
 
- /*const [beers, setBeers] = useState ([])
 
- 
   //fetch api data
   const getBeers = () => {
-    fetch ("https://api.punkapi.com/v2/ ")
-    .then((res) => {
-      return res.json()
+    fetch("https://api.punkapi.com/v2/beers")
+    .then((response) => {
+      return response.json()
     })
-    .then((data) => {
-      setBeers(data.results)
+    .then(data => {
+      setBeers(data)
     })
   }
-
   useEffect(() => {
     getBeers()
-  }, []) ;*/
+  }, []);
 
+ 
 
   return (
     <div>
-     <Nav />
-     <div>
-      {mappedBeers}
-     </div>
+      <Nav />
+      <div>
+      {beers &&<BeersContainer beers={beers}/>}
+      </div>
+      <BeerButton onClick={InfoCard}/>
     </div>
   );
 }
 
 export default App;
-/*<Nav />
-     <BeersContainer beers={beers} />*/
-     /*{beers.map((beer) => (
-      <p>{beer.id}</p>
-     ))} */

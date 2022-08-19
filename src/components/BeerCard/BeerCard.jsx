@@ -1,13 +1,15 @@
 import "./BeerCard.scss"
-import {useState} from 'react'
+import BeerButton from "../BeerButton/BeerButton"
+import InfoCard from "../InfoCard/InfoCard"
+import InfoContainer from "../InfoContainer/InfoContainer"
 
 const BeerCard = (props) => {
-    const { name , image_url, abv } = props.beer
     return (
-    <div>
-      <h2>{name}</h2> 
-      <img src={image_url} alt={name} />
-        <p>ABV: {abv}</p>
+    <div className="beer-card">
+      <h2>{props.name}</h2> 
+      <img src={props.image_url} alt={props.name} className="beer-img" />
+        <p>ABV: {props.abv}</p>
+        <BeerButton onClick={InfoContainer}/>
     </div>
     )
 }
