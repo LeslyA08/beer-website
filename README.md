@@ -1,11 +1,10 @@
 
-Start - All the wireframe content in black is the first part of the challenge - that is, the sidenav, the main section containing the beers and beer cards for each piece of data. The component tree is below to help you get started.
-1 - Once you've got the design and layout sorted to render the elements, it's time to add some search functionality. Make it so you can search the beers by their name, and the page content should update as you type each letter in the box.
 2 - Finally attempt to make it so you can filter the content on three conditions:
 High Alcohol (ABV value greater than 6%)
 Classic Range (Was first brewed before 2010)
 High Acidity (pH lower than 4)
-3 - Style the website however you see fit! Go wild!
+
+Test
 
 
 

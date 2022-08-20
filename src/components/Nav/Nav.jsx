@@ -1,12 +1,12 @@
 import SearchBar from "../SearchBar/SearchBar";
+import {Link} from "react-router-dom"
 import "./Nav.scss"
 
 const Nav = () => {
     return (
         <div>
             <p>Beers</p>
-            <input type="checkbox" id="beer-abv" />
-            <label for="beer-abv">High ABV (over 6%)</label>
+            <Link to="/ABV">ABV Filter</Link>
             <input type="checkbox" id="beer-classic" />
             <label for="beer-classic">Classic Range</label>
             <input type="checkbox" id="beer-acidity" />
