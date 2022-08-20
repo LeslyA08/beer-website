@@ -5,7 +5,6 @@ import Nav from "../../components/Nav/Nav"
 const Home = (props) => {
     return (
         <>
-        <Nav />
         <ExploreBeers beers={props.beers}/>
         </>
         )

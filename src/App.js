@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import './App.css';
 import ExploreBeers from './containers/ExploreBeers/ExploreBeers';
 import Home from "./containers/Home/Home"
+import Nav from "./components/Nav/Nav"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -27,23 +28,26 @@ function App() {
  
   
 const highestRating = beers.filter(beer => beer.abv < 6).sort((a,b) => b.abv - a.abv);
+
+const highestAcidity = beers.filter(beer => beer.ph < 4).sort((a,b) => a.ph - b.ph);
  
 
   return (
     <Router>
+      <Nav />
       <Routes>
         <Route 
           path="/"
           element={<Home beers={beers} />} />
-          <Route 
-            path="/ABV"
-            element={<ExploreBeers beers={highestRating}/>} />
-            <Route 
-              path="/ClassicRange"
-              element={null} />
-              <Route 
-                path="/Acidity"
-                elemtn={null}/>
+        <Route 
+          path="/ABV"
+          element={<ExploreBeers key="abv" beers={highestRating}/>} />
+        <Route 
+        path="/Classic"
+        element={<ExploreBeers/>}/>
+        <Route 
+          path="/Acidity"
+          element={<ExploreBeers key="acidity" beers={highestAcidity}/>}/>
       </Routes>
     </Router>
   )
