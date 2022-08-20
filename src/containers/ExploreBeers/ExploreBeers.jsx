@@ -19,11 +19,7 @@ const ExploreBeers = (props) => {
 
     return (
         <>
-        <SearchBar
-        label={"Beers"}
-        searchTerm={searchTerm}
-        handleInput={handleInput}
-        />
+       
         <BeerContainer beers={filteredBeers}/>
         </>
     )

@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import './App.css';
-import ABVfilter from "/home/lesly/nology/beer-website/src/containers/ABVfilter/ABVfiler.jsx"
+import ExploreBeers from './containers/ExploreBeers/ExploreBeers';
 import Home from "./containers/Home/Home"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -26,7 +26,7 @@ function App() {
   }, []);
  
   
-
+const highestRating = beers.filter(beer => beer.abv < 6).sort((a,b) => b.abv - a.abv);
  
 
   return (
@@ -37,7 +37,7 @@ function App() {
           element={<Home beers={beers} />} />
           <Route 
             path="/ABV"
-            element={<ABVfilter />} />
+            element={<ExploreBeers beers={highestRating}/>} />
             <Route 
               path="/ClassicRange"
               element={null} />
