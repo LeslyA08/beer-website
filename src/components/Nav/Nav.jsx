@@ -6,7 +6,7 @@ import "./Nav.scss"
 const Nav = () => {
  
     return (
-        <div>
+        <div className="nav">
             <p>Beers</p>
             <Link to="/">Home</Link>
             <Link to="/ABV">High Alcohol (ABV value greater than 6%)</Link>

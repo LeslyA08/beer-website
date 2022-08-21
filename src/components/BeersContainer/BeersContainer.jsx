@@ -3,6 +3,7 @@ import "./BeersContainer.scss";
 
 const BeersContainer = (props) => {
     return (
+        <div className="wholecard-grid">
         <div className="card-grid">
             {props.beers.map((beer) => {
             return <BeerCard
@@ -13,7 +14,8 @@ const BeersContainer = (props) => {
             description={beer.description}
             first_brewed={beer.first_brewed}
             />
-})}         
+})}        
+</div>
         </div>
         
     )
