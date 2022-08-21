@@ -6,9 +6,10 @@ const BeerCard = (props) => {
   const [flip, setFlip] = useState(false)
 
     return (
+      <div className="beerCard">
     <div className={ `card ${flip ? "flip" : ""}`}>
       <div className="front" onClick={()=> setFlip(!flip)}>
-      <h2>{props.name}</h2> 
+      <h2 className="title">{props.name}</h2> 
       <img src={props.image_url} alt={props.name} className="beer-img" />
         <p>ABV: {props.abv}</p>
         <p>{props.ph}</p>
@@ -19,6 +20,7 @@ const BeerCard = (props) => {
       <p>{props.description}</p>
       <p>{props.first_brewed}</p>
       </div>
+    </div>
     </div>
     )
 }

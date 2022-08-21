@@ -1,3 +1,8 @@
+.beerCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 .card {
     display: flex;
     flex-direction: row;
@@ -6,26 +11,33 @@
     position: relative;
     border-radius: 0.35rem;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
-    background-color: rgba(245, 245, 245, 0.973);
+    background-color: rgba(255, 211, 211, 0.973);
     transform-style: preserve-3d;
     transition: 150ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) 
         translateY(var(--translate-y, 0));
-    height: 250px;
-    width: 200px;
+    height: 500px;
+    width: 250px;
     margin: 10px;
+    font-style: sans-serif;
+    color:rgba(32, 4, 4, 0.973);
 
     .beer-img {
-        height: 100px;
-        width: 75px;
+        height: 300px;
+        width: 150px;
+        
     }
+    
+}
 }
 
 .card .front,
 .card .back {
     position: absolute;
     backface-visibility: hidden;
+   text-align: center;
+   padding: 5px;
 
 }
 
