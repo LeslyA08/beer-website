@@ -1,10 +1,38 @@
-.beer-card {
-    width: 200px; 
-    height: 400px;
-    border: 2px solid black;
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0.35rem;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+    background-color: rgba(245, 245, 245, 0.973);
+    transform-style: preserve-3d;
+    transition: 150ms;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) 
+        translateY(var(--translate-y, 0));
+    height: 250px;
+    width: 200px;
+    margin: 10px;
 
     .beer-img {
-        width: 50%;
-        height: 50%;
+        height: 100px;
+        width: 75px;
     }
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+
+.card.flip {
+    --rotate-y: 180deg;
+}
+
+.card .back {
+    transform: rotateY(180deg);
 }
