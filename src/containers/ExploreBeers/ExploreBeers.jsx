@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import SearchBar from "../../components/SearchBar/SearchBar"
 import BeerContainer from "../../components/BeersContainer/BeersContainer"
+import Nav from "../../components/Nav/Nav"
+import "./ExploreBeers.scss"
 
 const ExploreBeers = (props) => {
     const {beers} = props;
@@ -10,6 +12,7 @@ const ExploreBeers = (props) => {
         const cleanInput = event.target.value.toLowerCase();
         setSearchTerm(cleanInput);
     };
+    
     const filteredBeers = beers.filter((beer) => {
         const beersTitleLower = beer.name.toLowerCase();
 
@@ -18,11 +21,14 @@ const ExploreBeers = (props) => {
 
     return (
         <>
+        <div className="container">
         <SearchBar
-        label={"Beers"}
+        label={"Search Beers: "}
         searchTerm={searchTerm}
         handleInput={handleInput}
+        className="searchBar"
         />
+        </div>
         <BeerContainer beers={filteredBeers}/>
         </>
     )

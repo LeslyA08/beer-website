@@ -1,7 +1,9 @@
 import {Link} from "react-router-dom"
+import {useState} from 'react'
 import "./Nav.scss"
 
 const Nav = () => {
+ 
  
     return (
         <div className="nav">
