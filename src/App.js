@@ -29,7 +29,8 @@ function App() {
   
 const highestRating = beers.filter(beer => beer.abv < 6).sort((a,b) => b.abv - a.abv);
 
-const oldestDate = beers.filter(beer => (parseInt(beer.first_brewed.split("/")[1])) < 2011)
+
+const oldestDate = beers.filter(beer => (parseInt(beer.first_brewed.split("/")[1])) < 2011);
 
 const highestAcidity = beers.filter(beer => beer.ph < 4).sort((a,b) => a.ph - b.ph);
  

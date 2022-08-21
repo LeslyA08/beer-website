@@ -13,6 +13,7 @@ const BeersContainer = (props) => {
             tagling={beer.tagline}
             description={beer.description}
             first_brewed={beer.first_brewed}
+            ph={beer.ph}
             />
 })}        
 </div>
