@@ -1,5 +1,4 @@
 import "./BeerCard.scss"
-import BeerButton from "../BeerButton/BeerButton"
 import {useState} from 'react'
 
 const BeerCard = (props) => {

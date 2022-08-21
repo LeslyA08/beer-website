@@ -1,9 +1,4 @@
 
-2 - Finally attempt to make it so you can filter the content on three conditions:
-High Alcohol (ABV value greater than 6%)
-Classic Range (Was first brewed before 2010)
-High Acidity (pH lower than 4)
-
 Test
 
 
