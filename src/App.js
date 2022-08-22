@@ -5,8 +5,6 @@ import Home from "./containers/Home/Home"
 import Nav from "./components/Nav/Nav"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SearchBar from './components/SearchBar/SearchBar';
-
 
 function App() {
   
