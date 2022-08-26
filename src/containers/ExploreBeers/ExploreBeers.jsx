@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import SearchBar from "../../components/SearchBar/SearchBar"
 import BeerContainer from "../../components/BeersContainer/BeersContainer"
-import Nav from "../../components/Nav/Nav"
 import "./ExploreBeers.scss"
 
 const ExploreBeers = (props) => {

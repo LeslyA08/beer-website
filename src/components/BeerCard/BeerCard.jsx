@@ -11,7 +11,7 @@ const BeerCard = (props) => {
       <div className="front" onClick={()=> setFlip(!flip)}>
       <h2 className="title">{props.name}</h2> 
       <img src={props.image_url} alt={props.name} className="beer-img" />
-        <p>ABV: {props.abv}</p>
+        <p>ABV: {props.abv} %</p>
         <p>PH: {props.ph}</p>
       </div>
       <div className="back" onClick={()=> setFlip(!flip)}>

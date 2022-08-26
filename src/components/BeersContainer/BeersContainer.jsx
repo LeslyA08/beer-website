@@ -10,7 +10,7 @@ const BeersContainer = (props) => {
             name={beer.name} 
             image_url={beer.image_url}
             abv= {beer.abv}
-            tagling={beer.tagline}
+            tagline={beer.tagline}
             description={beer.description}
             first_brewed={beer.first_brewed}
             ph={beer.ph}
